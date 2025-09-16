@@ -50,7 +50,7 @@ jobs:
           haxelib list
           haxelib run lime build windows
           
-      - uses: actions/upload-artifact@vmain
+      - uses: actions/upload-artifact@main
         with:
           name: Windows Build
           path: export/release/windows/bin
