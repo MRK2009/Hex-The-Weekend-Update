@@ -15,40 +15,39 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      - uses: krdlab/setup-haxe@v1
+      - uses: actions/checkout@vmain
+      - uses: krdlab/setup-haxe@vmaster
         with:
-          haxe-version: 4.2.3
+          haxe-version: 4.2.5
       # Runs a set of commands using the runners shell
       - name: script run line haha
         run: |
-          cinst haxe --version 4.2.3 -y
+          cinst haxe --version 4.2.5 -y
           RefreshEnv
           mkdir "%HAXELIB_ROOT%"
           haxelib setup "%HAXELIB_ROOT%"
           haxelib install lime 7.9.0
           RefreshEnv
-          haxelib install openfl
-          haxelib install flixel
+          haxelib install openfl 9.1.0
+          haxelib install flixel 4.11.0
           haxelib run lime setup flixel
           haxelib run lime setup
           haxelib install flixel-tools
-          haxelib install flixel-addons
-          haxelib install flixel-ui
-          haxelib install hscript
+          haxelib install flixel-addons 2.11.0
+          haxelib install flixel-ui 2.4.0
+          haxelib install hscript 2.4.0
           haxelib install flixel-addons
           haxelib git faxe https://github.com/uhrobots/faxe
-          haxelib git polymod https://github.com/MasterEric/polymod.git
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
-          haxelib git extension-webm https://github.com/KadeDev/extension-webm
+          haxelib git extension-webm https://github.com/luckydog7/extension-webm.git
           haxelib run lime rebuild extension-webm windows
           haxelib git linc_luajit https://github.com/nebulazorua/linc_luajit.git
-          haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit
-          haxelib install actuate 
+          haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit.git
+          haxelib install actuate 1.8.9
           haxelib list
           haxelib run lime build windows
           
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@vmain
         with:
           name: Windows Build
           path: export/release/windows/bin
