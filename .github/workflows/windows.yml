@@ -27,7 +27,6 @@ jobs:
         run: |
           haxelib setup "%HAXELIB_ROOT%"
           haxelib install lime 7.9.0
-          RefreshEnv
           haxelib install openfl 9.1.0
           haxelib install flixel 4.11.0
           haxelib run lime setup flixel
@@ -36,9 +35,9 @@ jobs:
           haxelib remove flixel-addons
           haxelib install flixel-addons 2.11.0
           haxelib install flixel-ui 2.4.0
-          haxelib install hscript 2.4.0
           haxelib remove flixel-addons
           haxelib install flixel-addons 2.11.0
+          haxelib install hscript 2.4.0
           haxelib git faxe https://github.com/uhrobots/faxe
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
           haxelib git extension-webm https://github.com/luckydog7/extension-webm.git
