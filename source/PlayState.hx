@@ -2451,9 +2451,9 @@ class PlayState extends MusicBeatState
 		{
 			#if desktop
 			// The __backend.handle attribute is only available on native.
-			lime.media.openal.AL.sourcef(FlxG.sound.music._channel.__source.__backend.handle, lime.media.openal.AL.PITCH, songMultiplier);
+			lime.media.openal.AL.sourcef(FlxG.sound.music._channel.position.__backend.handle, lime.media.openal.AL.PITCH, songMultiplier);
 			if (vocals.playing)
-				lime.media.openal.AL.sourcef(vocals._channel.__source.__backend.handle, lime.media.openal.AL.PITCH, songMultiplier);
+				lime.media.openal.AL.sourcef(vocals._channel.position.__backend.handle, lime.media.openal.AL.PITCH, songMultiplier);
 			#end
 		}
 
@@ -2603,9 +2603,9 @@ class PlayState extends MusicBeatState
 		if (FlxG.sound.music.playing)
 			@:privateAccess
 		{
-			lime.media.openal.AL.sourcef(FlxG.sound.music._channel.__source.__backend.handle, lime.media.openal.AL.PITCH, songMultiplier);
+			lime.media.openal.AL.sourcef(FlxG.sound.music._channel.position.__backend.handle, lime.media.openal.AL.PITCH, songMultiplier);
 			if (vocals.playing)
-				lime.media.openal.AL.sourcef(vocals._channel.__source.__backend.handle, lime.media.openal.AL.PITCH, songMultiplier);
+				lime.media.openal.AL.sourcef(vocals._channel.position.__backend.handle, lime.media.openal.AL.PITCH, songMultiplier);
 		}
 		#end
 		if (generatedMusic)
@@ -5597,3 +5597,4 @@ class PlayState extends MusicBeatState
 		}
 	}
 } // u looked :O -ides
+
