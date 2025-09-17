@@ -21,7 +21,7 @@ jobs:
       - uses: actions/checkout@main
       - uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 4.2.3
+          haxe-version: 4.2.5
       # Runs a set of commands using the runners shell
       - name: script run line haha
         run: |
@@ -31,20 +31,20 @@ jobs:
           haxelib install flixel 4.11.0
           haxelib run lime setup flixel
           haxelib run lime setup
-          haxelib install flixel-tools
+          haxelib install flixel-tools 1.5.1
           haxelib remove flixel-addons
           haxelib install flixel-addons 2.11.0
           haxelib install flixel-ui 2.4.0
           haxelib remove flixel-addons
           haxelib install flixel-addons 2.11.0
           haxelib install hscript 2.4.0
-          haxelib git faxe https://github.com/uhrobots/faxe
+          haxelib git faxe https://github.com/uhrobots/faxe.git
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
           haxelib git extension-webm https://github.com/luckydog7/extension-webm.git
           haxelib run lime rebuild extension-webm windows
-          haxelib git linc_luajit https://github.com/nebulazorua/linc_luajit.git
+          haxelib git linc_luajit https://github.com/superpowers04/linc_luajit.git
           haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit.git
-          haxelib install actuate 1.8.9
+          haxelib install actuate
           haxelib list
           haxelib run lime build windows
           
