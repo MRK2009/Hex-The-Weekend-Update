@@ -2447,15 +2447,6 @@ class PlayState extends MusicBeatState
 		vocals.play();
 		FlxG.sound.music.time = Conductor.songPosition * songMultiplier;
 		vocals.time = FlxG.sound.music.time;
-		@:privateAccess
-		{
-			#if desktop
-			// The __backend.handle attribute is only available on native.
-			lime.media.openal.AL.sourcef(FlxG.sound.music._channel.position.__backend.handle, lime.media.openal.AL.PITCH, songMultiplier);
-			if (vocals.playing)
-				lime.media.openal.AL.sourcef(vocals._channel.position.__backend.handle, lime.media.openal.AL.PITCH, songMultiplier);
-			#end
-		}
 
 		#if FEATURE_DISCORD
 		DiscordClient.changePresence(detailsText
@@ -2599,15 +2590,6 @@ class PlayState extends MusicBeatState
 				currentLuaIndex++;
 			}
 		}
-		#if cpp
-		if (FlxG.sound.music.playing)
-			@:privateAccess
-		{
-			lime.media.openal.AL.sourcef(FlxG.sound.music._channel.position.__backend.handle, lime.media.openal.AL.PITCH, songMultiplier);
-			if (vocals.playing)
-				lime.media.openal.AL.sourcef(vocals._channel.position.__backend.handle, lime.media.openal.AL.PITCH, songMultiplier);
-		}
-		#end
 		if (generatedMusic)
 		{
 			if (songStarted && !endingSong)
@@ -5597,4 +5579,5 @@ class PlayState extends MusicBeatState
 		}
 	}
 } // u looked :O -ides
+
 
