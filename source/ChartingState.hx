@@ -1358,17 +1358,6 @@ class ChartingState extends MusicBeatState
 		tab_group_note.add(check_naltAnim);
 
 		UI_box.addGroup(tab_group_note);
-
-		/*player2 = new Character(0,0, _song.player2);
-			player1 = new Boyfriend(player2.width * 0.2,0 + player2.height, _song.player1);
-
-			player1.y = player1.y - player1.height;
-
-			player2.setGraphicSize(Std.int(player2.width * 0.2));
-			player1.setGraphicSize(Std.int(player1.width * 0.2));
-
-			UI_box.add(player1);
-			UI_box.add(player2); */
 	}
 
 	function pasteNotesFromArray(array:Array<Array<Dynamic>>, fromStrum:Bool = true)
@@ -1579,13 +1568,6 @@ class ChartingState extends MusicBeatState
 		// general shit
 		var title:FlxText = new FlxText(UI_box.x + 20, UI_box.y + 20, 0);
 		bullshitUI.add(title);
-		/* 
-			var loopCheck = new FlxUICheckBox(UI_box.x + 10, UI_box.y + 50, null, null, "Loops", 100, ['loop check']);
-			loopCheck.checked = curNoteSelected.doesLoop;
-			tooltips.add(loopCheck, {title: 'Section looping', body: "Whether or not it's a simon says style section", style: tooltipType});
-			bullshitUI.add(loopCheck);
-
-		 */
 	}
 
 	override function getEvent(id:String, sender:Dynamic, data:Dynamic, ?params:Array<Dynamic>)
@@ -1714,14 +1696,6 @@ class ChartingState extends MusicBeatState
 
 	var updatedSection:Bool = false;
 
-	/* this function got owned LOL
-		function lengthBpmBullshit():Float
-		{
-			if (getSectionByTime(Conductor.songPosition).changeBPM)
-				return getSectionByTime(Conductor.songPosition).lengthInSteps * (getSectionByTime(Conductor.songPosition).bpm / _song.bpm);
-			else
-				return getSectionByTime(Conductor.songPosition).lengthInSteps;
-	}*/
 	function poggers()
 	{
 		var notes = [];
@@ -1935,33 +1909,6 @@ class ChartingState extends MusicBeatState
 			}
 
 			shownNotes = [];
-
-			if (FlxG.sound.music != null)
-			{
-				if (FlxG.sound.music.playing)
-				{
-					@:privateAccess
-					{
-						#if desktop
-						// The __backend.handle attribute is only available on native.
-						lime.media.openal.AL.sourcef(FlxG.sound.music._channel.__source.__backend.handle, lime.media.openal.AL.PITCH, speed);
-						try
-						{
-							// We need to make CERTAIN vocals exist and are non-empty
-							// before we try to play them. Otherwise the game crashes.
-							if (vocals != null && vocals.length > 0)
-							{
-								lime.media.openal.AL.sourcef(vocals._channel.__source.__backend.handle, lime.media.openal.AL.PITCH, speed);
-							}
-						}
-						catch (e)
-						{
-							// Debug.logTrace("failed to pitch vocals (probably cuz they don't exist)");
-						}
-						#end
-					}
-				}
-			}
 
 			for (note in curRenderedNotes)
 			{
@@ -3645,3 +3592,4 @@ class ChartingState extends MusicBeatState
 		FlxG.log.error("Problem saving Level data");
 	}
 }
+
