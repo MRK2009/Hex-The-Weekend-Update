@@ -1,7 +1,5 @@
 import lime.app.Application;
-#if polymod
 import polymod.Polymod.PolymodError;
-#end
 import flixel.FlxG;
 import flixel.FlxSprite;
 import flixel.system.debug.log.LogStyle;
