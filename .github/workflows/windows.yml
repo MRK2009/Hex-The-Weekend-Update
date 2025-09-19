@@ -40,7 +40,7 @@ jobs:
           haxelib install flixel-addons 2.11.0
           haxelib install hscript 2.4.0
           haxelib git faxe https://github.com/uhrobots/faxe.git
-          haxelib git polymod https://github.com/larsiusprime/polymod.git 38cfe17ba234c58eab7e065021ec44ea8ce1e895
+          haxelib git polymod https://github.com/larsiusprime/polymod.git branch 38cfe17ba234c58eab7e065021ec44ea8ce1e895
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
           haxelib git extension-webm https://github.com/luckydog7/extension-webm.git
           haxelib run lime rebuild extension-webm windows
