@@ -44,7 +44,7 @@ jobs:
           haxelib git faxe https://github.com/uhrobots/faxe.git
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
           haxelib git extension-webm https://github.com/luckydog7/extension-webm.git
-          haxelib run lime rebuild extension-webm windows
+          haxelib run lime rebuild extension-webm linux
           haxelib git linc_luajit https://github.com/superpowers04/linc_luajit.git
           haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit.git
           haxelib install actuate
