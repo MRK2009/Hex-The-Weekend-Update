@@ -38,7 +38,7 @@ jobs:
           haxelib install flixel-addons 2.11.0
           haxelib remove flixel-addons
           haxelib install flixel-addons 2.11.0
-          haxelib install hscript 2.4.0
+          haxelib git hscript-improved https://github.com/CodenameCrew/hscript-improved.git
           haxelib git faxe https://github.com/uhrobots/faxe.git
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
           haxelib git extension-webm https://github.com/luckydog7/extension-webm.git
