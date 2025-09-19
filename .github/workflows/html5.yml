@@ -34,9 +34,10 @@ jobs:
           haxelib run lime setup flixel
           haxelib run lime setup
           haxelib install flixel-tools 1.5.1
-          haxelib remove flixel-addons
-          haxelib install flixel-addons 2.11.0
           haxelib install flixel-ui 2.4.0
+          haxelib remove flixel-ui
+          haxelib install flixel-ui 2.4.0
+          haxelib install flixel-addons 2.11.0
           haxelib remove flixel-addons
           haxelib install flixel-addons 2.11.0
           haxelib install hscript 2.4.0
