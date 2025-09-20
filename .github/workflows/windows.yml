@@ -28,7 +28,7 @@ jobs:
           haxelib setup "%HAXELIB_ROOT%"
           haxelib install lime 7.9.0
           haxelib install openfl 9.1.0
-          haxelib install flixel 4.11.0
+          haxelib git flixel https://github.com/MRK2009/flixel-4.11.0.git
           haxelib run lime setup flixel
           haxelib run lime setup
           haxelib install flixel-tools 1.5.1
