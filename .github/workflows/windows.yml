@@ -34,6 +34,8 @@ jobs:
           haxelib install flixel-tools 1.5.1 --quiet
           haxelib install flixel-ui 2.4.0 --quiet
           haxelib install flixel-addons 2.11.0 --quiet
+          haxelib remove flixel-addons
+          haxelib install flixel-addons 2.11.0 --quiet
           haxelib git hscript-improved https://github.com/CodenameCrew/hscript-improved.git --quiet
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc --quiet
           haxelib git extension-webm https://github.com/luckydog7/extension-webm.git --quiet
