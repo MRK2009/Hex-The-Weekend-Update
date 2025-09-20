@@ -33,10 +33,33 @@ jobs:
           haxelib run lime setup
           haxelib install flixel-tools 1.5.1
           haxelib install flixel-ui 2.4.0
-          haxelib remove flixel-ui
-          haxelib install flixel-ui 2.4.0
           haxelib install flixel-addons 2.11.0
+          haxelib git hscript-improved https://github.com/CodenameCrew/hscript-improved.git
+          haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
+          haxelib git extension-webm https://github.com/luckydog7/extension-webm.git
+          haxelib run lime rebuild extension-webm windows
+          haxelib git linc_luajit https://github.com/superpowers04/linc_luajit.git
+          haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit.git
+          haxelib install actuate
+          haxelib remove lime
+          haxelib remove openfl
+          haxelib remove flixel
+          haxelib remove flixel-tools
+          haxelib remove flixel-ui
           haxelib remove flixel-addons
+          haxelib remove hscript-improved
+          haxelib remove discord_rpc
+          haxelib remove extension-webm
+          haxelib remove linc_luajit
+          haxelib remove hxvm-luajit
+          haxelib remove actuate
+          haxelib install lime 7.9.0
+          haxelib install openfl 9.1.0
+          haxelib git flixel https://github.com/MRK2009/flixel-4.11.0.git
+          haxelib run lime setup flixel
+          haxelib run lime setup
+          haxelib install flixel-tools 1.5.1
+          haxelib install flixel-ui 2.4.0
           haxelib install flixel-addons 2.11.0
           haxelib git hscript-improved https://github.com/CodenameCrew/hscript-improved.git
           haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
